@@ -175,6 +175,21 @@ body{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;}
 .nav.replay button{width:62px;height:62px;font-size:26px;opacity:.85;}
 .nav button:active{transform:scale(.9);background:rgba(201,168,106,.9);color:#fff;}
 .cover .nav button{background:rgba(10,20,26,.35);border-color:rgba(240,217,168,.5);color:#f0d9a8;}
+/* 音乐开关（左上 · 旋转月相唱片） */
+.music{position:absolute;top:22px;left:26px;z-index:32;width:66px;height:66px;border-radius:50%;
+  border:1.5px solid rgba(176,141,73,.55);background:rgba(251,246,236,.66);color:var(--gold);cursor:pointer;
+  backdrop-filter:blur(4px);-webkit-tap-highlight-color:transparent;
+  display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease);}
+.music:active{transform:scale(.9);}
+.music .disc{width:36px;height:36px;border-radius:50%;border:2.5px solid currentColor;position:relative;
+  animation:spin 7s linear infinite;animation-play-state:paused;display:flex;align-items:center;justify-content:center;}
+.music .disc::before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:currentColor;}
+.music.playing .disc{animation-play-state:running;}
+.music .note{position:absolute;right:-6px;top:-8px;font-size:18px;opacity:0;transform:translateY(4px);transition:all .4s var(--ease);}
+.music.playing .note{opacity:1;transform:translateY(0);}
+.frame.ui-dark .music{background:rgba(10,20,26,.42);border-color:rgba(240,217,168,.55);color:#f0d9a8;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
 /* 翻页提示 */
 .hint{position:absolute;left:0;right:0;bottom:150px;z-index:31;text-align:center;pointer-events:none;
   color:var(--teal-dk);font-family:"Kaiti SC",serif;font-size:26px;letter-spacing:3px;opacity:0;transition:opacity .5s;}
@@ -610,6 +625,8 @@ body{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;}
   </div>
 </section>
   </div>
+  <audio id="bgm" src="audio/%E6%B5%B7%E4%B8%8A%E5%85%B1%E6%98%8E%E6%9C%88_v1.mp3" loop preload="auto"></audio>
+  <button class="music" id="musicBtn" aria-label="主题曲开关"><span class="disc"></span><span class="note">♪</span></button>
   <div class="topbar"><div class="fill" id="prog"></div></div>
   <div class="counter" id="counter">01 / 25</div>
   <div class="dots" id="dots"></div>
@@ -704,6 +721,24 @@ body{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;}
     s.classList.add('active');          /* 此刻 0→1 才会逐笔动画 */
     buzz(10);
   });
+
+  /* —— 主题曲 BGM —— */
+  const bgm=document.getElementById('bgm');
+  const musicBtn=document.getElementById('musicBtn');
+  let userPaused=false;
+  bgm.volume=0.85;
+  bgm.addEventListener('play',()=>musicBtn.classList.add('playing'));
+  bgm.addEventListener('pause',()=>musicBtn.classList.remove('playing'));
+  musicBtn.addEventListener('click',e=>{
+    e.stopPropagation();
+    if(bgm.paused){userPaused=false;bgm.play().catch(()=>{});}
+    else{userPaused=true;bgm.pause();}
+  });
+  /* 浏览器禁止有声自动播放：首次触碰/按键时解锁 */
+  const unlock=(e)=>{if(e&&e.target&&e.target.closest&&e.target.closest('#musicBtn'))return;
+    if(!userPaused&&bgm.paused)bgm.play().catch(()=>{});};
+  ['pointerdown','touchstart','keydown','wheel'].forEach(ev=>window.addEventListener(ev,unlock,{passive:true,capture:false}));
+  bgm.play().catch(()=>{});
 
   /* 键盘 */
   window.addEventListener('keydown',e=>{
