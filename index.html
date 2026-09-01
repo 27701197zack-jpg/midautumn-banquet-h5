@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>海上共明月 · 印象京恩中秋家宴 · 情愫版流程 H5</title>
+<style>
+:root{
+  --ink:#24323a;--ink2:#3d4f57;--muted:#7a8285;
+  --gold:#b08d49;--gold2:#c9a86a;--gold-soft:#e7d7b8;
+  --teal:#2f6f6a;--teal-dk:#224e4a;--teal-soft:#cfe0dc;
+  --rice:#f4eddf;--paper:#fbf6ec;--card:#fffdf7;
+  --seal:#a8402f;--seal-soft:#d98a7d;--line:rgba(36,50,58,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#cfc7b5;}
+@page{ size:720px 1280px; margin:0; }
+.slide{
+  width:720px;height:1280px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 60% at 80% -8%, rgba(201,168,106,.14), transparent 55%),
+    radial-gradient(80% 50% at 5% 108%, rgba(47,111,106,.10), transparent 55%),
+    linear-gradient(180deg,#f8f2e6,#f0e7d5);
+  page-break-after:always;color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB",sans-serif;
+}
+.slide:last-child{page-break-after:auto;}
+.wrap{position:relative;z-index:3;padding:66px 56px;height:100%;display:flex;flex-direction:column;}
+.serif{font-family:"Songti SC","STSong",serif;}.kai{font-family:"Kaiti SC","STKaiti",serif;}
+
+.kick{display:flex;align-items:center;gap:16px;color:var(--gold);font-size:22px;letter-spacing:3px;}
+.kick .no{font-family:"Songti SC",serif;font-size:24px;border:1.5px solid var(--gold2);border-radius:50%;width:46px;height:46px;display:flex;align-items:center;justify-content:center;}
+.kick .en{color:var(--muted);letter-spacing:3px;font-size:15px;}
+h1.pt{font-family:"Songti SC",serif;font-size:52px;color:var(--ink);margin:22px 0 6px;letter-spacing:2px;line-height:1.25;font-weight:700;}
+.subtitle{color:var(--teal-dk);font-size:24px;letter-spacing:1px;margin-bottom:10px;}
+.rule{height:3px;width:110px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:3px;margin:16px 0 30px;}
+.foot{position:absolute;left:56px;right:56px;bottom:34px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:17px;letter-spacing:2px;z-index:4;}
+.foot .brand{color:var(--gold);font-family:"Songti SC",serif;letter-spacing:2px;}
+.pg{font-family:"Songti SC",serif;color:var(--gold);}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px 34px;box-shadow:0 16px 36px -24px rgba(36,50,58,.5);}
+.card+.card{margin-top:24px;}
+.tag{display:inline-block;font-size:19px;letter-spacing:2px;padding:6px 20px;border-radius:30px;}
+.tag.gold{background:var(--gold-soft);color:#7a5e22;}.tag.teal{background:var(--teal-soft);color:var(--teal-dk);}.tag.seal{background:#f0d5cf;color:var(--seal);}
+.lead{font-size:27px;line-height:1.85;color:var(--ink2);}
+b.hl{color:var(--teal-dk);}b.go{color:var(--gold);}b.re{color:var(--seal);}
+.wm{position:absolute;right:40px;top:40px;font-family:"Songti SC",serif;font-size:300px;color:rgba(176,141,73,.07);z-index:1;line-height:1;}
+
+.quote{background:linear-gradient(135deg,rgba(47,111,106,.08),rgba(176,141,73,.08));border-left:6px solid var(--gold);border-radius:0 20px 20px 0;padding:30px 34px;}
+.quote p{font-family:"Kaiti SC",serif;font-size:34px;line-height:1.7;color:var(--ink);}
+.quote .who{margin-top:14px;font-size:21px;color:var(--muted);letter-spacing:2px;}
+.qmark{font-family:"Songti SC",serif;color:var(--gold);font-size:54px;}
+
+/* cover */
+.cover{background:#10212b;color:#f4eddf;}
+.cover .bg{position:absolute;inset:0;width:720px;height:1280px;z-index:1;}
+.cover .scrim{position:absolute;inset:0;z-index:2;}
+.cover .c-inner{position:relative;z-index:4;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 70px;}
+.cover .c-kick{color:var(--gold2);letter-spacing:5px;font-size:24px;margin-bottom:40px;}
+.cover h1{font-family:"Songti SC",serif;font-size:118px;letter-spacing:12px;line-height:1.05;color:#fbf3df;text-shadow:0 8px 40px rgba(0,0,0,.4);}
+.cover .c-sub{font-family:"Kaiti SC",serif;font-size:44px;color:var(--gold2);margin-top:30px;letter-spacing:6px;}
+.cover .c-line{width:160px;height:3px;background:linear-gradient(90deg,var(--gold2),transparent);margin:44px 0;}
+.cover .c-meta{font-size:24px;letter-spacing:2px;color:#cdd6d2;line-height:2.1;}
+.cover .c-meta b{color:#f0d9a8;font-weight:400;}
+.seal{position:absolute;width:96px;height:96px;border:4px solid #d98a7d;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#e8a598;font-family:"Songti SC",serif;font-size:34px;line-height:1.1;text-align:center;transform:rotate(-6deg);background:rgba(244,237,223,.1);z-index:5;letter-spacing:2px;}
+
+/* day badge */
+.daybadge{display:inline-flex;align-items:center;gap:16px;background:var(--teal-dk);color:#f4eddf;border-radius:40px;padding:12px 30px 12px 14px;align-self:flex-start;}
+.daybadge .moon{width:48px;height:48px;border-radius:50%;background:#f4eddf;}
+.daybadge b{font-family:"Songti SC",serif;font-size:28px;letter-spacing:2px;}
+.daybadge span{font-size:20px;color:var(--gold-soft);letter-spacing:2px;}
+.daybadge.gold{background:var(--gold);}.daybadge.gold span{color:#f0e2c2;}
+
+.banner{width:100%;display:block;border-radius:20px;border:1px solid var(--line);box-shadow:0 16px 34px -22px rgba(36,50,58,.55);}
+
+/* touchpoint rows */
+.tp{display:flex;gap:22px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:0 12px 28px -22px rgba(36,50,58,.45);}
+.tp .k{flex:0 0 150px;font-family:"Songti SC",serif;font-size:26px;color:var(--gold);}
+.tp .v{font-size:23px;line-height:1.6;color:var(--ink2);}
+.tp+.tp{margin-top:18px;}
+
+/* trio generated images */
+.trio{display:flex;flex-direction:column;gap:26px;}
+.trio .row{display:flex;gap:26px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 28px -22px rgba(36,50,58,.45);}
+.trio .row img{width:210px;height:210px;border-radius:16px;flex:0 0 210px;object-fit:none;}
+.trio h4{font-family:"Songti SC",serif;font-size:32px;color:var(--teal-dk);margin-bottom:10px;}
+.trio p{font-size:23px;line-height:1.6;color:var(--ink2);}
+.trio .say{font-family:"Kaiti SC",serif;font-size:23px;color:var(--gold);margin-top:10px;line-height:1.6;}
+
+/* chips */
+.chip{display:inline-block;background:var(--card);border:1.5px solid var(--gold2);border-radius:30px;padding:12px 26px;font-size:24px;color:var(--ink);font-family:"Songti SC",serif;margin:0 12px 14px 0;}
+
+/* ladder vertical */
+.ladderv{display:flex;flex-direction:column;gap:14px;}
+.lstep{border-radius:16px;padding:22px 28px;color:#fffdf7;display:flex;gap:22px;align-items:center;}
+.lstep .n{font-family:"Songti SC",serif;font-size:22px;opacity:.85;flex:0 0 64px;}
+.lstep .t{font-family:"Songti SC",serif;font-size:30px;letter-spacing:1px;flex:0 0 190px;}
+.lstep .d{font-size:21px;line-height:1.5;opacity:.95;}
+
+/* two ledger */
+.led{border-radius:20px;padding:30px 32px;}
+.led.l1{background:linear-gradient(160deg,#fffdf7,#f3ead6);border:1px solid var(--gold-soft);}
+.led.l2{background:linear-gradient(160deg,#224e4a,#2f6f6a);color:#eef4f2;}
+.led h3{font-family:"Songti SC",serif;font-size:32px;margin-bottom:18px;}
+.led.l1 h3{color:var(--gold);}.led.l2 h3{color:#f3c98a;}
+.led .item{font-size:24px;line-height:1.6;margin-bottom:16px;}
+.led .item b{font-family:"Songti SC",serif;}
+.led.l1 .item b{color:var(--gold);}.led.l2 .item b{color:#f3c98a;}
+
+/* objects grid */
+.ogrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.oi{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 26px -22px rgba(36,50,58,.45);}
+.oi h4{font-family:"Songti SC",serif;font-size:28px;color:var(--teal-dk);margin-bottom:8px;}
+.oi p{font-size:21px;line-height:1.5;color:var(--ink2);}
+.oi .say{font-family:"Kaiti SC",serif;font-size:21px;color:var(--gold);margin-top:10px;line-height:1.5;}
+
+/* quote cards */
+.qc{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:16px;padding:26px 28px;box-shadow:0 12px 26px -22px rgba(36,50,58,.4);}
+.qc+.qc{margin-top:20px;}
+.qc p{font-family:"Kaiti SC",serif;font-size:27px;line-height:1.7;color:var(--ink);margin-top:10px;}
+
+/* checklist */
+.check li{list-style:none;display:flex;gap:16px;align-items:flex-start;font-size:24px;line-height:1.6;padding:14px 0;border-bottom:1px dashed var(--line);}
+.check li::before{content:"";flex:0 0 26px;width:26px;height:26px;margin-top:6px;border:3px solid var(--teal);border-radius:7px;}
+.check li.x{color:var(--seal);}.check li.x::before{border-color:var(--seal);background:var(--seal);}
+.check li.ok{color:var(--teal-dk);}
+.ul-tight li{margin-left:30px;font-size:24px;line-height:1.85;color:var(--ink2);}
+
+.spacer{flex:1;}
+.center{text-align:center;}
+
+/* ============ H5 互动框架 ============ */
+:root{--ease:cubic-bezier(.22,.9,.28,1);}
+html,body{height:100%;margin:0;overflow:hidden;background:#0d171c;}
+body{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;}
+.ambient{position:fixed;inset:0;z-index:0;
+  background:radial-gradient(60% 50% at 20% 15%,rgba(176,141,73,.20),transparent 60%),
+             radial-gradient(60% 55% at 85% 85%,rgba(47,111,106,.22),transparent 60%),
+             linear-gradient(160deg,#122028,#0a1318);}
+.stage{position:fixed;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;}
+.phone{position:relative;}
+.frame{position:relative;width:720px;height:1280px;transform:scale(var(--s,1));transform-origin:center center;}
+.deck{position:absolute;inset:0;overflow:hidden;border-radius:0;background:#f0e7d5;touch-action:none;
+  box-shadow:0 60px 120px -40px rgba(0,0,0,.8);}
+@media(min-width:600px){ .deck{border-radius:34px;}
+  .phone::after{content:"";position:absolute;inset:-14px;border:2px solid rgba(201,168,106,.35);border-radius:46px;pointer-events:none;} }
+
+.deck .slide{position:absolute;inset:0;width:100%;height:100%;margin:0;
+  opacity:0;visibility:hidden;transform:translateY(70px) scale(.985);
+  transition:transform .72s var(--ease),opacity .62s var(--ease),visibility 0s linear .72s;
+  will-change:transform,opacity;}
+.deck .slide.active{opacity:1;visibility:visible;transform:translateY(0) scale(1);
+  transition:transform .72s var(--ease),opacity .62s var(--ease);z-index:2;}
+.deck .slide.was{transform:translateY(-60px) scale(.985);}
+
+/* 顶部进度条 */
+.topbar{position:absolute;top:0;left:0;right:0;height:6px;background:rgba(36,50,58,.12);z-index:30;}
+.topbar .fill{height:100%;width:0;background:linear-gradient(90deg,#c9a86a,#b08d49);box-shadow:0 0 12px rgba(201,168,106,.8);transition:width .6s var(--ease);}
+/* 页码 */
+.counter{position:absolute;top:26px;right:34px;z-index:30;font-family:"Songti SC",serif;color:var(--gold);
+  font-size:22px;letter-spacing:2px;background:rgba(251,246,236,.7);padding:6px 16px;border-radius:30px;backdrop-filter:blur(4px);}
+/* 右侧月相进度点 + 章节名提示 */
+.dots{position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:13px;}
+.dots i{width:22px;height:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;}
+.dots i::before{content:"";width:9px;height:9px;border-radius:50%;background:rgba(36,50,58,.22);transition:all .4s var(--ease);}
+.dots i.on::before{background:var(--gold);transform:scale(1.5);box-shadow:0 0 10px rgba(176,141,73,.7);}
+.dots i::after{content:attr(data-title);position:absolute;right:26px;top:50%;transform:translateY(-50%) translateX(8px);
+  background:rgba(36,50,58,.9);color:#f6efdf;font-family:"Songti SC",serif;font-size:19px;letter-spacing:2px;
+  padding:7px 16px;border-radius:16px;white-space:nowrap;opacity:0;pointer-events:none;transition:all .35s var(--ease);}
+.dots i:hover::after,.dots i.flash::after{opacity:1;transform:translateY(-50%) translateX(0);}
+/* 箭头 + 重播 */
+.nav{position:absolute;bottom:42px;z-index:31;display:flex;align-items:center;}
+.nav.prev{left:30px;} .nav.next{right:30px;} .nav.replay{left:50%;transform:translateX(-50%);bottom:50px;}
+.nav button{width:78px;height:78px;border-radius:50%;border:1.5px solid rgba(176,141,73,.55);
+  background:rgba(251,246,236,.62);color:var(--gold);font-size:34px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  backdrop-filter:blur(4px);transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;}
+.nav.replay button{width:62px;height:62px;font-size:26px;opacity:.85;}
+.nav button:active{transform:scale(.9);background:rgba(201,168,106,.9);color:#fff;}
+.cover .nav button{background:rgba(10,20,26,.35);border-color:rgba(240,217,168,.5);color:#f0d9a8;}
+/* 翻页提示 */
+.hint{position:absolute;left:0;right:0;bottom:150px;z-index:31;text-align:center;pointer-events:none;
+  color:var(--teal-dk);font-family:"Kaiti SC",serif;font-size:26px;letter-spacing:3px;opacity:0;transition:opacity .5s;}
+.hint.show{opacity:.9;animation:hintFloat 1.8s ease-in-out infinite;}
+.hint .chev{display:block;font-size:30px;color:var(--gold);margin-top:6px;animation:chev 1.6s ease-in-out infinite;}
+.cover .hint{color:#f0e2c2;}
+/* 深色屏整框 UI 反色 */
+.frame.ui-dark .counter{color:#f0d9a8;background:rgba(10,20,26,.45);}
+.frame.ui-dark .dots i::before{background:rgba(244,237,223,.32);}
+.frame.ui-dark .dots i.on::before{background:#f0d9a8;box-shadow:0 0 10px rgba(240,217,168,.85);}
+.frame.ui-dark .dots i::after{background:rgba(240,217,168,.96);color:#24323a;}
+.frame.ui-dark .nav button{background:rgba(10,20,26,.42);border-color:rgba(240,217,168,.55);color:#f0d9a8;}
+.frame.ui-dark .hint,.frame.ui-dark .hint .chev{color:#f0e2c2;}
+.frame.ui-dark .topbar{background:rgba(244,237,223,.18);}
+@keyframes hintFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes chev{0%,100%{transform:translateY(0);opacity:.5;}50%{transform:translateY(-10px);opacity:1;}}
+
+/* ============ 进场编排动画 ============ */
+[data-anim]{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease) calc(var(--i,0)*85ms + 120ms),transform .8s var(--ease) calc(var(--i,0)*85ms + 120ms);}
+.slide.active [data-anim]{opacity:1;transform:translateY(0);}
+.cover [data-anim].big{opacity:0;transform:translateY(30px);letter-spacing:36px;filter:blur(8px);
+  transition:opacity 1.1s var(--ease) calc(var(--i,0)*140ms + 200ms),transform 1.1s var(--ease) calc(var(--i,0)*140ms + 200ms),letter-spacing 1.4s var(--ease) calc(var(--i,0)*140ms + 200ms),filter 1.1s var(--ease) calc(var(--i,0)*140ms + 200ms);}
+.cover.active [data-anim].big{opacity:1;transform:none;letter-spacing:12px;filter:blur(0);}
+.cover img.bg{transition:transform 14s ease-out;}
+.cover.active img.bg{transform:scale(1.08);}
+.slide b.hl,.slide b.go,.slide b.re{background-repeat:no-repeat;
+  background-image:linear-gradient(transparent 62%,rgba(201,168,106,.45) 0);
+  background-size:0 100%;transition:background-size .9s var(--ease) 1.1s;}
+.slide.active b.hl,.slide.active b.go{background-image:linear-gradient(transparent 60%,rgba(201,168,106,.5) 0);background-size:100% 100%;}
+.slide.active b.re{background-image:linear-gradient(transparent 60%,rgba(168,64,47,.32) 0);background-size:100% 100%;}
+.trace{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--ease) .5s;}
+.slide.active .trace{stroke-dashoffset:0;}
+/* 阶梯条生长 */
+.lstep[data-anim]{transform-origin:left center;transform:scaleX(0);opacity:0;transition:opacity .5s ease calc(var(--i,0)*110ms + 500ms),transform .7s var(--ease) calc(var(--i,0)*110ms + 500ms);}
+.slide.active .lstep[data-anim]{transform:scaleX(1);opacity:1;}
+/* 月相旅程节点：CSS transform 会覆盖 SVG transform 属性，位移用 CSS 变量带入 */
+.moonnode{opacity:0;transform:translate(var(--tx,0px),var(--ty,0px)) scale(.15);
+  transform-box:view-box;transform-origin:0 0;transition:opacity .5s ease,transform .6s var(--ease);}
+.slide.active .moonnode{opacity:1;transform:translate(var(--tx,0px),var(--ty,0px)) scale(1);}
+/* 印章落版 */
+.seal[data-anim]{transform:rotate(-20deg) scale(1.6);opacity:0;transition:opacity .6s ease 1.4s,transform .8s var(--ease) 1.4s;}
+.slide.active .seal[data-anim]{transform:rotate(-6deg) scale(1);opacity:1;}
+</style></head>
+<body>
+
+<div class="ambient"></div>
+<div class="stage"><div class="phone"><div class="frame" id="frame">
+  <div class="deck" id="deck">
+<section class="slide cover">
+  <img class="bg" src="img_v/v_cover.jpg">
+  <div class="scrim" style="background:linear-gradient(180deg,rgba(7,15,20,.55) 0%,rgba(7,15,20,.05) 30%,rgba(7,15,20,.15) 55%,rgba(7,15,20,.72) 100%);"></div>
+  <div class="c-inner" style="justify-content:flex-end;padding-bottom:150px;">
+    <div class="c-kick">万家灯火 · 印象京恩　｜　2026 中秋家宴</div>
+    <h1>海上共<br>明月</h1>
+    <div class="c-sub">印象京恩 · 中秋家宴</div>
+    <div class="c-line"></div>
+    <div class="c-meta"><b>情愫版 · 流程设计方案</b>　手机竖版 v1<br>2026 · 09 · 18 – 20　｜　舟山<br>杭州 · 舟山 · 宁波 三地联动 · 约 180 位家人</div>
+  </div>
+  <div class="seal" style="right:56px;bottom:90px;">京恩<br>中秋</div>
+</section>
+<section class="slide" id="p2"><style>#p2 .card{padding:20px 28px;margin-top:14px;}#p2 .lead{font-size:24px;line-height:1.6;}#p2 .quote{padding:20px 26px;margin-bottom:14px;}#p2 .quote p{font-size:28px;line-height:1.55;}#p2 h1.pt{font-size:44px;margin:14px 0 4px;}#p2 .rule{margin:12px 0 18px;}#p2 .card .lead{margin-top:8px;}</style><div class="wm">壹</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">壹</span><span>设计总纲</span></div>
+    <h1 class="pt">客户看不到流程，<br>只被情愫托着回家</h1>
+    <div class="rule"></div>
+    <div class="quote"><p><span class="qmark">「</span>流程表只在会务手里；客户拿到的是<b class="go">心愿卡</b>，不是议程单——让家人从「赴宴的客人」变成「回家的家人」。</p></div>
+    <div class="card" style="border-top:6px solid var(--gold);"><span class="tag gold">铁律一 · 对外</span><p class="lead" style="margin-top:14px;"><b class="hl">无行程</b>：海报、短信、物料不出现时间点与流程；只讲主题与情愫。</p></div>
+    <div class="card" style="border-top:6px solid var(--teal);"><span class="tag teal">铁律二 · 对内</span><p class="lead" style="margin-top:14px;"><b class="hl">有节拍</b>：分钟动线只在会务总控与助教耳麦里；客户手册只有拜月词、心愿页、物之心语。</p></div>
+    <div class="card" style="border-top:6px solid var(--seal);"><span class="tag seal">铁律三 · 政策</span><p class="lead" style="margin-top:14px;">价格权益邀约期与 1v1 <b class="hl">前置渗透</b>；晚宴只在情绪最高点<b class="re">发布</b>，不逼单。</p></div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">02</span></div>
+</section>
+<section class="slide" id="p3"><style>#p3 h1.pt{font-size:46px;}#p3 .rule{margin:12px 0 16px;}#p3 .quote{padding:16px 26px;margin-bottom:12px;}#p3 .quote p{font-size:26px;line-height:1.5;}#p3 .card svg{max-height:372px;}#p3 .card .kai{font-size:24px;}#p3 .card{padding:22px 28px;}</style><div class="wm">贰</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">贰</span><span>情绪逻辑</span></div>
+    <h1 class="pt">引线 · 炸药</h1>
+    <div class="rule"></div>
+    <div class="quote"><p style="font-size:26px;">邀约的<b class="go">情怀</b>比流程更重要——每次做的海报全是流程，一点情愫都没有。</p><div class="who">—— 薛院 · 9/1 定调</div></div>
+    <div class="quote" style="border-left-color:var(--teal);"><p style="font-size:26px;">流程写得太清晰，他早都<b class="re">带着盾牌</b>来了。</p></div>
+    <div class="card" style="flex:1;">
+      <svg viewBox="0 0 520 460" style="width:100%;">
+        <path d="M40,430 C150,420 180,340 280,280 S440,120 480,60" fill="none" stroke="#c9a86a" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <g transform="translate(480,60)" stroke="#a8402f" stroke-width="4" stroke-linecap="round">
+          <line x1="0" y1="-22" x2="0" y2="-46"/><line x1="-16" y1="-16" x2="-32" y2="-32"/><line x1="16" y1="-16" x2="32" y2="-32"/><line x1="-20" y1="0" x2="-44" y2="0"/><line x1="20" y1="0" x2="44" y2="0"/>
+          <circle r="14" fill="#a8402f" stroke="none"/>
+        </g>
+        <g font-family="Songti SC,serif" text-anchor="middle">
+          <circle cx="70" cy="420" r="12" fill="#c9a86a"/><text x="120" y="428" font-size="26" fill="#7a5e22" text-anchor="start">点引线 · 邀约海报</text>
+          <circle cx="240" cy="305" r="12" fill="#c9a86a"/><text x="280" y="300" font-size="26" fill="#7a5e22" text-anchor="start">压实 · 见山故事</text>
+          <circle cx="380" cy="150" r="12" fill="#a8402f"/><text x="330" y="120" font-size="26" fill="#a8402f" text-anchor="end">引爆 · 拜月发布</text>
+        </g>
+      </svg>
+      <p class="kai center" style="font-size:28px;color:var(--teal-dk);">前期只添柴、不谈单；情绪压到最满，方案才"一引而爆"。</p>
+      <p class="kai center" style="font-size:24px;color:var(--gold);margin-top:12px;">没有爱，哪来方案——产品永远是媒介，真心才是底层逻辑。</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">03</span></div>
+</section>
+<section class="slide"><div class="wm">叁</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">叁</span><span>请柬世界</span></div>
+    <h1 class="pt">客户全程看到的，<br>只有"美"与"盼"</h1>
+    <div class="rule"></div>
+    <div class="tp"><div class="k">邀约海报</div><div class="v">主题「海上共明月·印象京恩」＋唯美海月图＋一两句情愫<br><span style="color:var(--seal);font-size:20px;">✕ 不放日程、流程、项目清单、硬广</span></div></div>
+    <div class="tp"><div class="k">每日铺垫<br>D-7</div><div class="v">邀约人朋友圈 / 私信逐日传递情愫，从周三就开始期待<br><span style="color:var(--seal);font-size:20px;">✕ 不发"会议议程"</span></div></div>
+    <div class="tp"><div class="k">赴约路上</div><div class="v">邀约人短信贺佳节、盼相聚："海上有明月，今夜有家人等您"<br><span style="color:var(--seal);font-size:20px;">✕ 不催单、不报流程</span></div></div>
+    <div class="spacer"></div>
+    <div class="card center" style="background:rgba(176,141,73,.1);"><p class="kai" style="font-size:26px;color:var(--teal-dk);">平台参观随到随讲、讲完即送酒店——<b class="re">不刻意推销</b>，一旦刻意，家宴就成了"鸿门宴"。</p></div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">04</span></div>
+</section>
+<section class="slide"><div class="wm">叁</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">叁</span><span>请柬世界 · 续</span></div>
+    <h1 class="pt">现场与手册，<br>也只有情愫</h1>
+    <div class="rule"></div>
+    <div class="tp"><div class="k">到场签到</div><div class="v">一枝鲜花 ＋ 一张心愿卡 ＋ 当场即时美照<br><span style="color:var(--seal);font-size:20px;">✕ 资料袋里不放"行程表"</span></div></div>
+    <div class="tp"><div class="k">房间 / 会场</div><div class="v">主题曲轻铺、海月视觉、一盏小灯<br><span style="color:var(--seal);font-size:20px;">✕ 不放易拉宝式政策堆头</span></div></div>
+    <div class="tp"><div class="k">客户手册</div><div class="v">一本「归家手帖」：拜月词 · 心愿页 · 物之心语 · 合影位<br><span style="color:var(--seal);font-size:20px;">✕ 不放时间表、讲师课表</span></div></div>
+    <div class="spacer"></div>
+    <p class="kai center" style="font-size:27px;color:var(--gold);">轻，才有情——下一页，是客户随身仅有的三样。</p>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">05</span></div>
+</section>
+<section class="slide"><div class="wm">叁</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">叁</span><span>随身三样</span></div>
+    <h1 class="pt" style="font-size:44px;">一枝花 · 一张卡 · 一张美照</h1>
+    <div class="rule"></div>
+    <div class="trio">
+      <div class="row"><img src="img_v/a_flower.jpg"><div><h4>一枝花</h4><p>百合 · 玫瑰 · 康乃馨，签到时献上。</p><p class="say">"这枝是替您家里人献的，他们最盼的，就是您健康。"</p></div></div>
+      <div class="row"><img src="img_v/a_wishcard.jpg"><div><h4>一张心愿卡</h4><p>写下健康心愿，封进水晶许愿瓶。</p><p class="say">"京恩替您供在佛前，守一整年。"</p></div></div>
+      <div class="row"><img src="img_v/a_photo.jpg"><div><h4>一张美照</h4><p>现场拍摄，晚宴前/离场前递到手里。</p><p class="say">"把此刻最好的您，立刻还给您。"</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">06</span></div>
+</section>
+<section class="slide"><img class="bg" src="img_v/v_cloud.jpg" style="position:absolute;inset:0;width:720px;height:1280px;z-index:0;opacity:.9"><div style="position:absolute;inset:0;background:rgba(248,242,230,.86);z-index:1;"></div><div class="wm">肆</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">肆</span><span>三天情愫动线</span></div>
+    <h1 class="pt">月有三相，情有三段</h1>
+    <div class="rule"></div>
+    <svg viewBox="0 0 520 640" style="width:100%;">
+      <path d="M260,40 C120,120 120,220 260,300 C400,380 400,480 260,600" fill="none" stroke="#b08d49" stroke-width="4" stroke-dasharray="1 12" stroke-linecap="round"/>
+      <g font-family="Songti SC,serif" text-anchor="middle">
+        <g transform="translate(260,70)"><circle r="46" fill="#fbf4dc" stroke="#c9a86a" stroke-width="3"/><text y="12" font-size="30" fill="#7a5e22">满</text><text x="0" y="76" font-size="28" fill="#224e4a">Day1 · 9/18</text><text x="0" y="112" font-size="22" fill="#7a5e22">品牌版＋家宴版</text></g>
+        <g transform="translate(260,330)"><circle r="46" fill="#fbf4dc" stroke="#2f6f6a" stroke-width="3"/><path d="M20,-40 A46,46 0 0,0 20,40 A30,46 0 0,1 20,-40 Z" fill="#e3dbc9"/><text x="0" y="76" font-size="28" fill="#224e4a">Day2 · 9/19</text><text x="0" y="112" font-size="22" fill="#2f6f6a">体验版 · 平台分流</text></g>
+        <g transform="translate(260,590)"><circle r="46" fill="#fbf4dc" stroke="#b08d49" stroke-width="3"/><path d="M-6,-42 A46,46 0 0,0 32,0 A32,46 0 0,1 -6,-42 Z" fill="#e3dbc9"/><text x="0" y="-72" font-size="28" fill="#224e4a">Day3 · 9/20</text><text x="0" y="-108" font-size="22" fill="#7a5e22">旅游版 · 圆满</text></g>
+      </g>
+    </svg>
+    <p class="kai center" style="font-size:27px;color:var(--teal-dk);background:rgba(255,253,247,.8);border-radius:16px;padding:22px;">归家 <b class="go">→</b> 体证 <b class="go">→</b> 圆满；首日合场做阵仗，次日分流做深度，三日轻松留念想。</p>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">07</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge"><span class="moon"></span><b>Day 1 · 9/18</b><span>品牌版</span></div>
+    <h1 class="pt" style="font-size:46px;">壹 · 赴月归家</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--gold);">
+      <p class="lead"><b class="go">心境</b>：赶路的疲惫、一丝"又来开会"的防备 → 落地、被接住。</p>
+      <p class="lead" style="margin-top:16px;"><b class="hl">场景</b>：新客先到平台，有人随到随陪、像带家人参观自家，一份温热营养餐；老客直达半岛酒店，外场掼蛋、小游戏如年会串门。签到献一枝花，当场拍照、晚宴前把照片递到手里。</p>
+      <div style="background:rgba(176,141,73,.1);border-radius:14px;padding:20px 24px;margin-top:20px;"><p class="kai" style="font-size:26px;color:var(--gold);">物语 · 献花："这枝是替您家里人献的，他们最盼的，就是您健康。"</p></div>
+      <p style="font-size:20px;color:var(--muted);margin-top:18px;line-height:1.6;">内部节拍（客户不可见）：12:00 分流报到 → 12:30-14:00 平台检测（完一位走一位）→ 14:00-14:30 入住</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">Day1 · 品牌版</span><span class="pg">08</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge"><span class="moon"></span><b>Day 1 · 9/18</b><span>14:40-16:00</span></div>
+    <h1 class="pt" style="font-size:46px;">贰 · 静心抄经</h1>
+    <div class="rule"></div>
+    <img class="banner" src="img_v/b_chao.jpg" style="margin-bottom:26px;">
+    <div class="card" style="border-top:6px solid var(--teal);">
+      <p class="lead"><b class="go">心境</b>：从旅途燥热，慢慢静下来。</p>
+      <p class="lead" style="margin-top:14px;"><b class="hl">场景</b>：薛院主持普陀疗愈开营礼，带众开示、抄经。一炉香、一张纸、一笔墨，低吟声中把心收回来。</p>
+      <p class="kai" style="font-size:26px;color:var(--teal-dk);background:rgba(47,111,106,.08);border-radius:14px;padding:20px 24px;margin-top:18px;">卸下、心安——"在这里，我可以慢下来。" 疗愈招牌的第一次兑现，不再走马观花。</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">Day1 · 品牌版</span><span class="pg">09</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge"><span class="moon"></span><b>Day 1 · 9/18</b><span>16:15-18:00</span></div>
+    <h1 class="pt" style="font-size:46px;">叁 · 见山懂得</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--gold);margin-bottom:22px;">
+      <p class="lead" style="font-size:25px;">金总讲京恩缘起 → 两堂专业课 → 专家讲 <b class="hl">1+3 健康管理</b>。不是"我们有什么项目"，而是"您这副身体，这一年该怎么被好好对待"。</p>
+    </div>
+    <div class="card" style="background:linear-gradient(165deg,#fffdf7,#f3ead6);flex:1;">
+      <p class="serif center" style="font-size:28px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;">1 + 3 健康管理路径</p>
+      <svg viewBox="0 0 520 420" style="width:100%;">
+        <g transform="translate(260,66)"><circle r="60" fill="#b08d49"/><text y="6" text-anchor="middle" fill="#fbf3df" font-family="Songti SC,serif" font-size="34">1</text><text y="92" text-anchor="middle" fill="#7a5e22" font-family="Songti SC,serif" font-size="26">生活方式减负</text></g>
+        <text x="260" y="188" text-anchor="middle" font-family="Kaiti SC,serif" font-size="21" fill="#7a8285">减消炎饮食 · 减代谢负担 · 减压力（疗愈即"减"）</text>
+        <g stroke="#c9a86a" stroke-width="2" stroke-dasharray="4 6">
+          <line x1="260" y1="200" x2="110" y2="260"/><line x1="260" y1="200" x2="260" y2="260"/><line x1="260" y1="200" x2="410" y2="260"/>
+        </g>
+        <g font-family="Songti SC,serif" text-anchor="middle">
+          <g transform="translate(110,320)"><rect x="-92" y="-52" width="184" height="104" rx="16" fill="#2f6f6a"/><text y="-6" fill="#f4eddf" font-size="32">清 · 调</text><text y="30" fill="#cfe0dc" font-size="19" font-family="PingFang SC">清瘀滞 · 调气血（同步）</text></g>
+          <g transform="translate(260,320)"><rect x="-80" y="-52" width="160" height="104" rx="16" fill="#224e4a"/><text y="-6" fill="#f4eddf" font-size="32">控</text><text y="30" fill="#cfe0dc" font-size="19" font-family="PingFang SC">炎症管理</text></g>
+          <g transform="translate(410,320)"><rect x="-92" y="-52" width="184" height="104" rx="16" fill="#b08d49"/><text y="-6" fill="#fbf3df" font-size="32">稳</text><text y="30" fill="#f0e2c2" font-size="19" font-family="PingFang SC">荷尔蒙/细胞/菌群 三选一</text></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">Day1 · 品牌版</span><span class="pg">10</span></div>
+</section>
+<section class="slide cover">
+  <img class="bg" src="img_v/v_feast.jpg">
+  <div class="scrim" style="background:linear-gradient(180deg,rgba(7,15,20,.5),rgba(7,15,20,.15) 40%,rgba(7,15,20,.78));"></div>
+  <div class="c-inner" style="justify-content:flex-end;padding-bottom:120px;text-align:center;align-items:center;">
+    <div class="c-kick" style="text-align:center;">Day 1 · 9/18 夜　家宴版 · 18:30-21:30</div>
+    <h1 style="font-size:96px;letter-spacing:8px;">围月家宴</h1>
+    <div class="c-sub" style="font-size:38px;">情绪压实到最满，再一引而爆</div>
+    <div class="c-line" style="background:linear-gradient(90deg,transparent,var(--gold2),transparent);"></div>
+    <p class="kai" style="font-size:27px;color:#e8dcc2;line-height:1.8;max-width:560px;">水墨舞开场，越剧 · 唱歌 · 诗歌助兴，设 T 台；主题曲全场轻铺。致辞五阶递进，把情绪一阶阶托上去。</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge gold"><span class="moon"></span><b>家宴版</b><span>五阶致辞</span></div>
+    <h1 class="pt" style="font-size:44px;">五阶递进，托到最满</h1>
+    <div class="rule"></div>
+    <div class="ladderv">
+      <div class="lstep" style="background:linear-gradient(90deg,#cdb27f,#c9a86a);"><span class="n">一阶</span><span class="t">佳节问候</span><span class="d">向现场每一位、及其家人朋友致中秋问候</span></div>
+      <div class="lstep" style="background:linear-gradient(90deg,#c2a466,#bd9a52);"><span class="n">二阶</span><span class="t">平台初心</span><span class="d">舟山深耕十余年，为何倡导"山中礼佛 · 山前修心"</span></div>
+      <div class="lstep" style="background:linear-gradient(90deg,#4a837d,#2f6f6a);"><span class="n">三阶</span><span class="t">金总讲话</span><span class="d">世界第六大康养圣地的初心与誓言</span></div>
+      <div class="lstep" style="background:linear-gradient(90deg,#33706b,#224e4a);"><span class="n">四阶</span><span class="t">家人故事</span><span class="d">老顾客带音乐上台，舞台表现欲一放，自然动情</span></div>
+      <div class="lstep" style="background:linear-gradient(90deg,#cf7a6c,#a8402f);"><span class="n">五阶</span><span class="t">拜月 · 许愿 · 发布</span><span class="d">情绪最满处，方案水到渠成</span></div>
+    </div>
+    <p class="kai center" style="font-size:25px;color:var(--teal-dk);margin-top:26px;">95% 的人追求的是虚应的情怀与感恩——引线点好，炸药压实，<b class="re">发布就是爆炸那一瞬</b>。</p>
+  </div>
+  <div class="foot"><span class="brand">Day1 · 家宴版</span><span class="pg">12</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge gold"><span class="moon"></span><b>家宴版</b><span>三大高光时刻</span></div>
+    <h1 class="pt" style="font-size:44px;">拜月 · 许愿 · 发布</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--teal);"><span class="tag teal">拜月祈福</span><p class="lead" style="font-size:25px;margin-top:12px;">露台设佛前供灯，薛院着海清服领拜——"古人先拜月、后赏月"，众人合十跟读。</p><p class="kai" style="font-size:24px;color:var(--gold);margin-top:10px;">"一灯能除千年暗，愿这盏灯照您一年安康。"</p></div>
+    <div class="card" style="border-top:6px solid var(--gold);"><span class="tag gold">水晶许愿瓶</span><p class="lead" style="font-size:25px;margin-top:12px;">心愿卡写下健康心愿、封入水晶瓶，京恩供佛前一整年；次日送寺、拍视频发群。</p><p class="kai" style="font-size:24px;color:var(--gold);margin-top:10px;">"明年中秋，这只瓶子我们当面打开，读给月亮听。"</p></div>
+    <div class="card" style="border-top:6px solid var(--seal);"><span class="tag seal">方案发布</span><p class="lead" style="font-size:25px;margin-top:12px;">故事与许愿之后，顺势发布<b class="re">京恩健康九九卡 9999</b>（天长地久卡）。</p><p class="kai" style="font-size:24px;color:var(--gold);margin-top:10px;">"这不是一张卡，是我们陪您走过接下来一年的约定。"</p></div>
+  </div>
+  <div class="foot"><span class="brand">Day1 · 家宴版</span><span class="pg">13</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge gold"><span class="moon"></span><b>Day 2 · 9/19</b><span>体验版 · 全员在平台</span></div>
+    <h1 class="pt" style="font-size:46px;">修己 · 体证</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--teal);">
+      <p class="kai" style="font-size:27px;color:var(--muted);margin-bottom:18px;">被照料，亲证"昨天说的，今天真在我身上发生"</p>
+      <div style="margin-bottom:16px;"><span class="chip">7星早检</span><span class="chip">筑基功法</span><span class="chip">平台分流</span><span class="chip">1v1 成交</span></div>
+      <p class="lead" style="font-size:25px;"><b class="hl">9:00-12:00 四轨并行</b>：手工月饼/做灯 · 音叉疗法 · 项目操作 · 专家见诊，碎片时间拜月手作，不空等。</p>
+      <p class="lead" style="font-size:25px;margin-top:14px;"><b class="hl">下午</b>：疗愈打透（烟茶/情志中医/神经抗衰），检测＋1v1 见诊，在信任温情中成交，不靠逼压。<b class="re">京恩客户下午离场，不留尾巴。</b></p>
+    </div>
+    <div class="spacer"></div>
+    <p class="kai center" style="font-size:25px;color:var(--teal-dk);">疗愈名额可作下一场邀约由头——详见下页惜别之约。</p>
+  </div>
+  <div class="foot"><span class="brand">Day2 · 体验版</span><span class="pg">14</span></div>
+</section>
+<section class="slide" style="background:linear-gradient(180deg,#15293a,#1d3a49);">
+  <div class="wrap" style="align-items:center;justify-content:center;text-align:center;">
+    <img class="a-fade" src="img_v/a_farewell.jpg" style="width:420px;border-radius:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);border:1px solid rgba(201,168,106,.4);">
+    <h1 class="kai" style="font-size:50px;color:#fbf3df;margin:44px 0 20px;line-height:1.5;">离场不是结束，<br>是"明年今夜，<br>我们当面读您心愿"的<br><span style="color:#f3c98a;">惜别之约</span></h1>
+    <p style="font-size:23px;color:#cfe0dc;line-height:1.9;">水晶瓶供佛前一年 → 明年中秋 / 年底年会请回当面读愿<br>种下复购钩子，疗愈名额邀约下一场</p>
+  </div>
+  <div class="foot" style="color:#9fb0ab;"><span class="brand" style="color:#f3c98a;">Day2 · 惜别</span><span class="pg" style="color:#f3c98a;">15</span></div>
+</section>
+<section class="slide">
+  <div class="wrap">
+    <div class="daybadge gold"><span class="moon"></span><b>Day 3 · 9/20</b><span>旅游版 · 万家灯火客户</span></div>
+    <h1 class="pt" style="font-size:46px;">别月 · 圆满</h1>
+    <div class="rule"></div>
+    <img class="banner" src="img_v/b_temple.jpg" style="margin-bottom:26px;">
+    <div class="card" style="border-top:6px solid var(--gold);">
+      <p class="lead" style="font-size:25px;">上午游<b class="hl">观音法界 / 观音村</b>（旅游挪到今日，"疗愈和京恩环境才是核心"）；午前后返程，三天两夜闭环。</p>
+      <div style="background:rgba(176,141,73,.1);border-radius:14px;padding:20px 24px;margin-top:18px;"><p class="kai" style="font-size:25px;color:#7a5e22;line-height:1.7;">此时把<b>水晶瓶供寺视频</b>发群——众人亲眼看见"京恩真在干正事"。带着被供奉的心愿、一张美照、一份伴手礼、一首主题曲离开。</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">Day3 · 旅游版</span><span class="pg">16</span></div>
+</section>
+<section class="slide"><div class="wm">伍</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">伍</span><span>情绪节奏</span></div>
+    <h1 class="pt">一条情绪曲线</h1>
+    <div class="rule"></div>
+    <div class="card" style="flex:1;">
+      <svg viewBox="0 0 560 700" style="width:100%;">
+        <line x1="60" y1="40" x2="60" y2="600" stroke="#7a8285" stroke-width="2"/>
+        <line x1="60" y1="600" x2="520" y2="600" stroke="#7a8285" stroke-width="2"/>
+        <text x="30" y="70" font-family="Kaiti SC,serif" font-size="22" fill="#7a8285">情绪</text>
+        <path d="M90,560 C160,548 200,500 250,470 C300,440 330,330 370,250 C400,190 420,120 400,90 C380,150 420,260 440,330 C455,385 470,420 490,430" fill="none" stroke="#b08d49" stroke-width="5"/>
+        <path d="M90,560 C160,548 200,500 250,470 C300,440 330,330 370,250 C400,190 420,120 400,90 L400,600 L90,600 Z" fill="#c9a86a" opacity=".16"/>
+        <g transform="translate(400,90)" stroke="#a8402f" stroke-width="3" stroke-linecap="round"><line x1="0" y1="-16" x2="0" y2="-34"/><line x1="-12" y1="-12" x2="-26" y2="-26"/><line x1="12" y1="-12" x2="26" y2="-26"/><circle r="11" fill="#a8402f" stroke="none"/></g>
+        <g font-family="Songti SC,serif" font-size="26">
+          <circle cx="110" cy="556" r="9" fill="#c9a86a"/><text x="128" y="550" fill="#7a5e22">点引线</text><text x="128" y="580" font-size="18" fill="#7a8285" font-family="PingFang SC">D-7 邀约 · 路上</text>
+          <circle cx="250" cy="470" r="9" fill="#c9a86a"/><text x="268" y="440" fill="#7a5e22">压实</text><text x="268" y="466" font-size="18" fill="#7a8285" font-family="PingFang SC">见山 · 五阶故事</text>
+          <circle cx="370" cy="250" r="0"/><text x="300" y="70" fill="#a8402f">引爆 · 家宴</text><text x="300" y="40" font-size="18" fill="#a8402f" font-family="PingFang SC">拜月 · 许愿 · 发布</text>
+          <circle cx="455" cy="385" r="9" fill="#2f6f6a"/><text x="300" y="360" fill="#224e4a">兑现</text><text x="300" y="386" font-size="18" fill="#7a8285" font-family="PingFang SC">Day2 体验成交</text>
+          <circle cx="490" cy="430" r="9" fill="#b08d49"/><text x="300" y="660" fill="#7a5e22">回勾</text><text x="360" y="660" font-size="18" fill="#7a8285" font-family="PingFang SC">供寺视频 · 主题曲 · 明年之约</text>
+        </g>
+      </svg>
+      <p class="kai center" style="font-size:25px;color:var(--teal-dk);">发布是"水到渠成的成全"，而非"被割韭菜"。</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">17</span></div>
+</section>
+<section class="slide"><div class="wm">陆</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">陆</span><span>物之心语</span></div>
+    <h1 class="pt" style="font-size:46px;">每件道具，都是一句<br>说给家人的话</h1>
+    <div class="rule"></div>
+    <div class="ogrid">
+      <div class="oi"><h4>签到花</h4><p>百合·玫瑰·康乃馨</p><p class="say">替您家人献的，他们最盼您健康。</p></div>
+      <div class="oi"><h4>即时照片</h4><p>晚宴前递到手里</p><p class="say">把此刻最好的您，立刻还给您。</p></div>
+      <div class="oi"><h4>水晶许愿瓶</h4><p>供佛前一年</p><p class="say">您的心愿，京恩替您守一整年。</p></div>
+      <div class="oi"><h4>佛前供灯</h4><p>露台拜月</p><p class="say">一灯能除千年暗，照您一年安康。</p></div>
+    </div>
+    <div class="spacer"></div>
+    <p class="kai center" style="font-size:24px;color:var(--seal);">礼品发放严禁报价式（"这个值多少钱"）——细致的温情超过一切。</p>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">18</span></div>
+</section>
+<section class="slide"><div class="wm">陆</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">陆</span><span>物之心语 · 续</span></div>
+    <h1 class="pt" style="font-size:46px;">伴手与余韵</h1>
+    <div class="rule"></div>
+    <div class="ogrid">
+      <div class="oi"><h4>香薰</h4><p>抽奖 / 伴手</p><p class="say">把家宴这一夜的宁静，带回您床头。</p></div>
+      <div class="oi"><h4>能量水</h4><p>每日陪伴</p><p class="say">每天一口，记得有人在舟山惦记您。</p></div>
+      <div class="oi"><h4>益生菌</h4><p>对应 1+3 之"稳"</p><p class="say">稳住的不只是菌群，是您好气色。</p></div>
+      <div class="oi"><h4>主题曲</h4><p>全场 BGM 循环</p><p class="say">《海上共明月·印象京恩》，旋律一起就回家。</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">19</span></div>
+</section>
+<section class="slide"><div class="wm">柒</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">柒</span><span>两本账</span></div>
+    <h1 class="pt" style="font-size:46px;">同一时刻，两本账</h1>
+    <div class="rule"></div>
+    <div class="led l1"><h3>● 客户感知（情愫）</h3>
+      <div class="item"><b>邀约期</b>　收到美的海报与每日问候，开始期待</div>
+      <div class="item"><b>9/18 午</b>　"回家"、被献花、被拍照</div>
+      <div class="item"><b>9/18 夜</b>　家宴、拜月、许愿、被成全</div>
+      <div class="item"><b>9/19</b>　被照料、亲证效果、不舍惜别</div>
+      <div class="item" style="margin-bottom:0;"><b>9/20</b>　轻松游玩、带着念想走</div>
+    </div>
+    <div class="led l2"><h3>◆ 团队动作（内部节拍 · 不可见）</h3>
+      <div class="item"><b>邀约期</b>　1v1 前置渗透政策、名单调档</div>
+      <div class="item"><b>9/18 午</b>　新客平台 2h 参观＋检测分流；老客酒店暖场</div>
+      <div class="item"><b>9/18 夜</b>　五阶控场、灯光/供灯/水晶瓶/发布排序</div>
+      <div class="item"><b>9/19</b>　四轨分流体验、1v1 见诊成交、京恩客离场</div>
+      <div class="item" style="margin-bottom:0;"><b>9/20</b>　供寺视频发群、下场疗愈名额邀约</div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">20</span></div>
+</section>
+<section class="slide"><div class="wm">捌</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">捌</span><span>话术碎片</span></div>
+    <h1 class="pt" style="font-size:46px;">说给家人听的话</h1>
+    <div class="rule"></div>
+    <div class="qc"><span class="tag gold">邀约</span><p>"今年的月亮，我们提前替您圆好了一桌家宴。不谈别的，就想请您回舟山的家，吃顿团圆饭。"</p></div>
+    <div class="qc" style="border-left-color:var(--teal);"><span class="tag teal">路上短信</span><p>"海上有明月，今夜有家人等您。慢些开车，我们都在。"</p></div>
+    <div class="qc" style="border-left-color:var(--seal);"><span class="tag seal">签到</span><p>"家人，欢迎回家。"（献花：这枝是替您家里人献的……）</p></div>
+    <div class="qc" style="border-left-color:var(--gold);"><span class="tag gold">入席见照</span><p>"您看，今晚的您，比月亮还亮。"</p></div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">21</span></div>
+</section>
+<section class="slide"><div class="wm">捌</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">捌</span><span>话术碎片 · 续</span></div>
+    <h1 class="pt" style="font-size:46px;">拜月 · 许愿 · 发布 · 送别</h1>
+    <div class="rule"></div>
+    <div class="qc" style="border-left-color:var(--teal);"><span class="tag teal">拜月引导</span><p>"古人拜月，拜的是团圆、是平安。今夜我们不向外求，只愿身边人、家里人，一年安康……"</p></div>
+    <div class="qc" style="border-left-color:var(--seal);"><span class="tag seal">许愿</span><p>"把最惦记的健康心愿写下来封进瓶里，京恩替您供在佛前，守一整年。"</p></div>
+    <div class="qc"><span class="tag gold">方案发布</span><p>"这不是一张卡，是我们陪您走过接下来一年的约定——清、调、控、稳，我们都在。这不是优惠，是想让相信京恩的人，把健康和圆满带回家。"</p></div>
+    <div class="qc" style="border-left-color:var(--teal);"><span class="tag teal">送别 · 读愿</span><p>"明年中秋，这只瓶子我们当面打开，把您的心愿读给月亮听。"</p></div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">22</span></div>
+</section>
+<section class="slide"><div class="wm">玖</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">玖</span><span>红线</span></div>
+    <h1 class="pt" style="font-size:46px;">守住红线</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--seal);">
+      <ul class="check">
+        <li class="x">客户面前不出现流程表 / 议程单 / 时间点 / 课表；手册只有情愫与心愿</li>
+        <li class="x">平台参观随到随讲，<b>不刻意推销</b>（防"鸿门宴"观感）</li>
+        <li class="x">现场不逼单、不报价式发礼品；政策前置渗透，现场只发布</li>
+        <li class="x">疗效 / 政策表述为草稿，对外发布前<b>须法务审核</b></li>
+        <li class="ok">水晶瓶供寺承诺必兑现：次日送寺、拍视频、可溯源</li>
+        <li class="ok">孔明灯已否决（机场航路），拜月用露台佛前供灯替代</li>
+      </ul>
+    </div>
+    <div class="spacer"></div>
+    <p class="kai center" style="font-size:26px;color:var(--gold);">集合要有气势阵仗，分流要有仪式感与信任。</p>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">23</span></div>
+</section>
+<section class="slide"><div class="wm">玖</div>
+  <div class="wrap">
+    <div class="kick"><span class="no">玖</span><span>落地待办</span></div>
+    <h1 class="pt" style="font-size:46px;">抠到每一颗螺丝钉</h1>
+    <div class="rule"></div>
+    <div class="card" style="border-top:6px solid var(--teal);">
+      <ul class="check" style="--c:var(--teal);">
+        <li><b>薛院</b>：章节命名与五阶/话术口径终审（总编导）；拜月引导词、主持串词</li>
+        <li><b>文案</b>：无流程版邀约情愫海报 ＋ D-7 每日铺垫文案</li>
+        <li><b>音乐</b>：主题曲《海上共明月·印象京恩》AI 谱曲</li>
+        <li><b>物料</b>：归家手帖 / 心愿卡（替代议程单）；签到花、即时快印、水晶瓶、物语卡</li>
+        <li><b>场地</b>：15B 佛前供灯布置；半岛晚宴场 / 外场游戏区 / 露台动线（小荣）</li>
+        <li><b>资源</b>：水晶瓶供寺对接（师傅）＋拍摄；专家溪水档期；三地名单与 1v1 渗透分工</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">海上共明月·印象京恩</span><span class="pg">24</span></div>
+</section>
+<section class="slide cover">
+  <img class="bg" src="img_v/v_closing.jpg">
+  <div class="scrim" style="background:radial-gradient(ellipse 70% 50% at 50% 38%,rgba(7,15,20,.1),rgba(7,15,20,.6)),linear-gradient(180deg,rgba(7,15,20,.4),rgba(7,15,20,.65));"></div>
+  <div class="c-inner" style="justify-content:flex-end;text-align:center;align-items:center;padding-bottom:170px;">
+    <h1 style="font-size:104px;letter-spacing:14px;">海上共明月</h1>
+    <div class="c-sub" style="font-size:40px;">印象京恩 · 中秋家宴</div>
+    <div class="c-line" style="background:linear-gradient(90deg,transparent,var(--gold2),transparent);"></div>
+    <p class="kai" style="font-size:36px;color:var(--gold2);letter-spacing:3px;line-height:1.9;">让内心宁静下来，宛如天空一轮满月，<br>从此人生圆满。</p>
+    <p style="font-size:20px;letter-spacing:3px;color:#9fb0ab;margin-top:40px;">万家灯火 · 印象京恩　｜　2026 · 09 · 18 – 20　｜　舟山</p>
+  </div>
+</section>
+  </div>
+  <div class="topbar"><div class="fill" id="prog"></div></div>
+  <div class="counter" id="counter">01 / 25</div>
+  <div class="dots" id="dots"></div>
+  <div class="hint" id="hint">上滑翻页<span class="chev">↑</span></div>
+  <div class="nav prev"><button id="btnPrev" aria-label="上一页">‹</button></div>
+  <div class="nav replay"><button id="btnReplay" aria-label="重播本页动画">↺</button></div>
+  <div class="nav next"><button id="btnNext" aria-label="下一页">›</button></div>
+</div></div></div>
+
+<script>
+(function(){
+  const deck=document.getElementById('deck');
+  const frame=document.getElementById('frame');
+  const slides=[...deck.querySelectorAll('.slide')];
+  const total=slides.length;
+  const dots=document.getElementById('dots'),prog=document.getElementById('prog'),
+        counter=document.getElementById('counter'),hint=document.getElementById('hint');
+  let cur=0, started=false;
+
+  const DARK=new Set([0,10,14,24]);
+  const isDark=(s,i)=>s.classList.contains('cover')||DARK.has(i);
+  const titleOf=s=>{
+    const k=s.querySelector('.kick span:not(.no)'); if(k&&k.textContent.trim())return k.textContent.trim();
+    const db=s.querySelector('.daybadge b'); if(db&&db.textContent.trim())return db.textContent.trim();
+    const h=s.querySelector('h1'); if(h)return h.textContent.replace(/\s+/g,'').slice(0,12);
+    return '海上共明月';
+  };
+
+  slides.forEach((s,i)=>{
+    const d=document.createElement('i');
+    d.dataset.title=titleOf(s);
+    d.addEventListener('click',()=>go(i));
+    dots.appendChild(d);
+  });
+  const dotEls=[...dots.children];
+
+  /* —— 进场动画元素标注（按 DOM 顺序错峰）—— */
+  const ANIM_SEL='.daybadge,.kick,h1.pt,h1.kai,.subtitle,.rule,.quote,.card,.tp,.trio .row,.lstep,.led,.ogrid .oi,.qc,.banner,.seal,.chips,img.a-fade,.c-kick,.c-inner h1,.c-sub,.c-line,.c-meta,.wrap>p';
+  slides.forEach(s=>{
+    [...s.querySelectorAll(ANIM_SEL)].forEach((el,i)=>{el.setAttribute('data-anim','');el.style.setProperty('--i',i);});
+    s.querySelectorAll('.cover h1,.cover .c-sub,.cover .c-kick').forEach(el=>el.classList.add('big'));
+  });
+
+  /* —— SVG 逐笔绘制 —— */
+  function trace(idx,sel){const s=slides[idx];if(!s)return;
+    s.querySelectorAll(sel).forEach(p=>{p.classList.add('trace');p.setAttribute('pathLength','1');p.style.pathLength=1;});}
+  trace(2,'path[stroke-dasharray],svg path');   // 引线·炸药
+  trace(6,'path[stroke-dasharray]');            // 月相旅程
+  trace(9,'svg line');                          // 1+3 连线
+  trace(16,'path');                             // 情绪曲线
+  /* 月相旅程节点：把 SVG translate 提为 CSS 变量，避免 CSS transform 覆盖属性 */
+  const journey=slides[6];
+  if(journey)journey.querySelectorAll('svg g[transform]').forEach((g,i)=>{
+    if(!g.querySelector('circle'))return;
+    const m=/translate\(\s*(-?[\d.]+)[ ,]+(-?[\d.]+)/.exec(g.getAttribute('transform')||'');
+    if(m){g.style.setProperty('--tx',m[1]+'px');g.style.setProperty('--ty',m[2]+'px');}
+    g.classList.add('moonnode');
+    g.style.transitionDelay=(0.55+i*0.45)+'s';
+  });
+
+  let flashTimer=null;
+  function render(){
+    slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.classList.toggle('was',i<cur);});
+    dotEls.forEach((d,i)=>d.classList.toggle('on',i===cur));
+    prog.style.width=((cur+1)/total*100)+'%';
+    counter.textContent=String(cur+1).padStart(2,'0')+' / '+total;
+    frame.classList.toggle('ui-dark',isDark(slides[cur],cur));
+    hint.classList.toggle('show',!started);
+    dotEls.forEach(d=>d.classList.remove('flash'));
+    clearTimeout(flashTimer);
+    if(started){dotEls[cur].classList.add('flash');
+      flashTimer=setTimeout(()=>dotEls[cur]&&dotEls[cur].classList.remove('flash'),1600);}
+  }
+  const buzz=ms=>{try{navigator.vibrate&&navigator.vibrate(ms);}catch(e){}};
+  function go(i){cur=Math.max(0,Math.min(total-1,i));started=true;hint.classList.remove('show');render();buzz(8);}
+  const next=()=>go(cur+1),prev=()=>go(cur-1);
+
+  document.getElementById('btnNext').addEventListener('click',e=>{e.stopPropagation();next();});
+  document.getElementById('btnPrev').addEventListener('click',e=>{e.stopPropagation();prev();});
+  document.getElementById('btnReplay').addEventListener('click',e=>{
+    e.stopPropagation();
+    const s=slides[cur];
+    /* 先瞬时回到隐藏态（禁过渡），再恢复 class，让整屏动画重新逐笔播放 */
+    s.classList.remove('active');
+    s.style.transition='none';
+    const all=s.querySelectorAll('*');
+    all.forEach(el=>{el.style.transition='none';});
+    void s.offsetWidth;                 /* 瞬时回到隐藏态 */
+    s.style.transition='';
+    all.forEach(el=>{el.style.transition='';});
+    void s.offsetWidth;                 /* 过渡重新挂好，元素仍在隐藏态 */
+    s.classList.add('active');          /* 此刻 0→1 才会逐笔动画 */
+    buzz(10);
+  });
+
+  /* 键盘 */
+  window.addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();next();}
+    if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prev();}
+    if(e.key==='Home')go(0);if(e.key==='End')go(total-1);
+  });
+  /* 滚轮（节流） */
+  let wheelLock=false;
+  window.addEventListener('wheel',e=>{
+    if(wheelLock)return;if(Math.abs(e.deltaY)<16)return;
+    wheelLock=true;e.deltaY>0?next():prev();setTimeout(()=>wheelLock=false,620);
+  },{passive:true});
+
+  /* —— 跟手拖拽翻页（Pointer Events：触屏滑动 + 鼠标拖拽）—— */
+  const H=1280;
+  let drag=null,suppressClick=false;
+  const deckScale=()=>deck.getBoundingClientRect().height/H||1;
+  deck.addEventListener('pointerdown',e=>{
+    if(e.target.closest('button,.dots'))return;
+    drag={id:e.pointerId,y:e.clientY,dy:0,moved:false};
+    try{deck.setPointerCapture(e.pointerId);}catch(_){}
+    slides.forEach(s=>{s.style.transition='none';});
+  });
+  deck.addEventListener('pointermove',e=>{
+    if(!drag||e.pointerId!==drag.id)return;
+    let d=(e.clientY-drag.y)/deckScale();
+    if((cur===0&&d>0)||(cur===total-1&&d<0))d*=0.32;  /* 两端橡皮筋 */
+    drag.dy=d;
+    if(Math.abs(e.clientY-drag.y)>8)drag.moved=true;
+    slides[cur].style.transform='translateY('+d+'px) scale('+(1-Math.abs(d)/H*0.05)+')';
+    slides[cur].style.opacity=String(1-Math.abs(d)/H*0.6);
+    const nt=slides[cur+1],pv=slides[cur-1];
+    if(d<0&&nt){nt.style.visibility='visible';nt.style.transform='translateY('+(H+d)+'px)';nt.style.opacity=String(Math.min(1,Math.abs(d)/H*1.5));}
+    if(d>0&&pv){pv.style.visibility='visible';pv.style.transform='translateY('+(-H+d)+'px)';pv.style.opacity=String(Math.min(1,Math.abs(d)/H*1.5));}
+  });
+  function endDrag(e){
+    if(!drag)return;
+    if(e&&e.pointerId!==drag.id)return;
+    const d=drag.dy,moved=drag.moved;drag=null;
+    slides.forEach(s=>{s.style.transition='';s.style.transform='';s.style.opacity='';s.style.visibility='';});
+    if(moved){
+      suppressClick=true;setTimeout(()=>suppressClick=false,60);
+      const TH=100;
+      if(d<-TH)next();else if(d>TH)prev();else render();
+    }
+  }
+  deck.addEventListener('pointerup',endDrag);
+  deck.addEventListener('pointercancel',endDrag);
+
+  /* 点击轻触反馈（拖拽翻页后抑制误触） */
+  deck.addEventListener('click',e=>{
+    if(suppressClick)return;
+    const c=e.target.closest('.card,.tp,.qc,.oi,.row,.lstep,.led,.item,.chip,.quote,.seal');
+    if(c){c.style.transition='transform .18s';c.style.transform='scale(.985)';setTimeout(()=>c.style.transform='',180);}
+  });
+
+  /* 自适应缩放 */
+  function fit(){
+    const pad=Math.min(window.innerWidth,window.innerHeight)<600?0:36;
+    const s=Math.min((window.innerWidth-pad*2)/720,(window.innerHeight-pad*2)/1280);
+    frame.style.setProperty('--s',s);
+  }
+  window.addEventListener('resize',fit);fit();
+  render();
+})();
+</script>
+</body></html>
